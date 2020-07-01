@@ -1,0 +1,15 @@
+{
+  "name": "frontend-playground",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/valtech-ch/frontend-playground",
+  "author": "valtech-ch",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
