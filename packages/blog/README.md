@@ -6,6 +6,7 @@
 - Next.js
 - Typescript
 - Emotion
+- Tailwind
 
 ## Features
 
@@ -32,6 +33,26 @@
 }
 ```
 
-4. With emotion
+4. With emotion and tailwind
 
-- Add the dependencies: `yarn add @emotion/core @emotion/styled`
+- Add dependencies: `yarn add @emotion/core @emotion/styled @emotion/react`
+- Add dev dependencies: `yarn add --dev @emotion/babel-plugin @tailwindcss/ui @tailwindcssinjs/macro babel-plugin-macros tailwindcss`
+- Add a new script to `package.json` to update `base.css` when a new plugin has been added to tailwind: `"build:base-css": "tailwindcss build ./styles/tailwind.base.css -o ./styles/base.css"`
+- Create `.babelrc.js`:
+
+```
+{
+  "presets": ["next/babel"],
+  "plugins": ["macros", "emotion"]
+}
+```
+
+- Create `tailwind.config.js`:
+
+```
+module.exports = {
+  theme: {},
+  variants: {},
+  plugins: [require("@tailwindcss/ui")],
+};
+```

@@ -5,17 +5,24 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "build:base-css": "tailwindcss build ./styles/tailwind.base.css -o ./styles/base.css"
   },
   "dependencies": {
     "@emotion/core": "^10.0.28",
+    "@emotion/react": "^11.0.0-next.13",
     "@emotion/styled": "^10.0.27",
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   },
   "devDependencies": {
+    "@emotion/babel-plugin": "^11.0.0-next.13",
+    "@tailwindcss/ui": "^0.3.0",
+    "@tailwindcssinjs/macro": "^0.7.2",
     "@types/react": "^16.9.41",
+    "babel-plugin-macros": "^2.8.0",
+    "tailwindcss": "^1.4.6",
     "typescript": "^3.9.6"
   }
 }
