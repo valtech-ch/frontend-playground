@@ -1,3 +1,18 @@
+# Blog
+
+## Stack
+
+- React
+- Next.js
+- Typescript
+- Emotion
+
+## Features
+
+- Absolute imports
+
+## How to build from scratch
+
 1. Create a next app: `yarn create next-app`
 
 2. With typescript
@@ -16,3 +31,7 @@
   }
 }
 ```
+
+4. With emotion
+
+- Add the dependencies: `yarn add @emotion/core @emotion/styled`
