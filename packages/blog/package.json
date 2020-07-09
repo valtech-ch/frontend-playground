@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "build:base-css": "tailwindcss build ./styles/tailwind.base.css -o ./styles/base.css"
+    "build:base-css": "tailwindcss build ./styles/tailwind.base.css -o ./styles/base.css",
+    "lint": "eslint . --ext .ts,.tsx,.js",
+    "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
     "@emotion/core": "^10.0.28",
@@ -21,8 +23,27 @@
     "@tailwindcss/ui": "^0.3.0",
     "@tailwindcssinjs/macro": "^0.7.2",
     "@types/react": "^16.9.41",
+    "@typescript-eslint/eslint-plugin": "^3.6.0",
+    "@typescript-eslint/parser": "^3.6.0",
     "babel-plugin-macros": "^2.8.0",
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.6",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
     "tailwindcss": "^1.4.6",
     "typescript": "^3.9.6"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,js}": "yarn lint:fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }

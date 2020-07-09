@@ -1,20 +1,20 @@
-import Head from "next/head";
-import Logo from "components/molecules/Logo/Logo";
-import styled from "@emotion/styled";
-import tw from "@tailwindcssinjs/macro";
+import Head from 'next/head'
+import Logo from 'components/molecules/Logo/Logo'
+import styled from '@emotion/styled'
+import tw from '@tailwindcssinjs/macro'
+
+const Container = styled.div(tw`flex flex-col min-h-screen`)
+const Header = styled.header(tw`bg-black flex w-full`)
+const HeaderContent = styled.div(tw`w-32`)
+const Main = styled.main(tw`flex-grow`)
+const Footer = styled.footer(tw`bg-black flex justify-center w-full`)
+const FooterContent = styled.div(tw`w-64`)
 
 type BlankLayoutProps = {
-  children: React.ReactNode;
-};
+  children: React.ReactNode
+}
 
-const Container = styled.div(tw`flex flex-col min-h-screen`);
-const Header = styled.header(tw`bg-black flex w-full`);
-const HeaderContent = styled.div(tw`w-32`);
-const Main = styled.main(tw`flex-grow`);
-const Footer = styled.footer(tw`bg-black flex justify-center w-full`);
-const FooterContent = styled.div(tw`w-64`);
-
-export default function BlankLayout({ children }: BlankLayoutProps) {
+export default function BlankLayout({ children }: BlankLayoutProps): React.ReactElement {
   return (
     <Container>
       <Head>
@@ -36,5 +36,5 @@ export default function BlankLayout({ children }: BlankLayoutProps) {
         </FooterContent>
       </Footer>
     </Container>
-  );
+  )
 }

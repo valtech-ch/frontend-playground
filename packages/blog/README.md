@@ -33,7 +33,72 @@
 }
 ```
 
-4. With emotion and tailwind
+4. Linting Setup
+
+- Add eslint: `yarn add -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin`
+- Add prettier: `yarn add -D prettier eslint-config-prettier eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks`
+- Create `.prettierrc` with the following config:
+
+```
+{
+  "semi": false,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "printWidth": 120
+}
+```
+
+- Create `.eslintrc` with the following config:
+
+```
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": { "jsx": true }
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    // Prettier plugin and recommended rules
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    // Include .prettierrc.js rules
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "labelComponents": [],
+        "labelAttributes": [],
+        "controlComponents": [],
+        "assert": "either",
+        "depth": 25
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
+```
+
+5. Styling
 
 - Add dependencies: `yarn add @emotion/core @emotion/styled @emotion/react`
 - Add dev dependencies: `yarn add --dev @emotion/babel-plugin @tailwindcss/ui @tailwindcssinjs/macro babel-plugin-macros tailwindcss`
