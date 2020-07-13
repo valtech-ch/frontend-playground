@@ -6,6 +6,10 @@
   "repository": "https://github.com/valtech-ch/frontend-playground",
   "author": "valtech-ch",
   "license": "MIT",
+  "scripts": {
+    "git": "bash ./scripts/git.sh",
+    "reset": "npx lerna clean && yarn install"
+  },
   "devDependencies": {
     "lerna": "^3.22.1"
   },
