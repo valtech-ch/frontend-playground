@@ -2,6 +2,7 @@
 
 ## Folder structure
 
+- Key aspect: no nesting. Please no nesting. The idea is to keep the folders defined in the "General example" below without nesting components inside other components.
 - Define a "components" package to keep a global shareable components library.
 - Define a "eslint-config" package to share the eslint + prettier config.
 - The "pages" don't contain any presentational component. They just get the data and provide it in the right format to the template from "components".
