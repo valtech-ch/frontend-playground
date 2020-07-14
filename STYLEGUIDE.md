@@ -4,7 +4,7 @@
 
 - Define a "components" package to keep a global shareable components library.
 - Define a "eslint-config" package to share the eslint + prettier config.
-- The "pages" don't contain any presentational component. They just get the data and provide it in the right format to the template from "components"
+- The "pages" don't contain any presentational component. They just get the data and provide it in the right format to the template from "components".
 - Question: Is it possible to keep this structure without any nesting of children components in the templates and pages?
 
 ### General example
@@ -77,9 +77,9 @@
 
 ## Components
 
-- Only 1 component per file
-- Keep the UI in the main component
-- Keep logic in a custom hook
+- Only 1 component per file.
+- Use a custom hook for the logic to reduce the weight of the component.
+- Keep the UI in the component.
 
 The component:
 
