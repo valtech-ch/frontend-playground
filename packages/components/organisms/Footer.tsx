@@ -1,4 +1,4 @@
-import Logo from 'components/molecules/Logo/Logo'
+import Logo from 'molecules/Logo'
 import styled from '@emotion/styled'
 import tw from '@tailwindcssinjs/macro'
 

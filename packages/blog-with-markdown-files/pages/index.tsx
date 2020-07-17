@@ -1,4 +1,4 @@
-import Img from 'components/atoms/Img/Img'
+import { Img } from '@valtech-ch/components'
 
 export default function IndexPage(): React.ReactElement {
   return (

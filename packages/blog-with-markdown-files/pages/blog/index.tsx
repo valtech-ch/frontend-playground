@@ -1,7 +1,7 @@
 import { BlogPost } from 'types/blog'
 import { CONTENTS_BLOG_POSTS_PATH } from 'constants/blog'
 import { GetStaticProps } from 'next'
-import Link from 'components/atoms/Link/Link'
+import { Link } from '@valtech-ch/components'
 import React from 'react'
 import fs from 'fs'
 import matter from 'gray-matter'

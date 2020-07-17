@@ -1,17 +1,17 @@
-import Footer from './Footer/Footer'
+import Footer from 'organisms/Footer'
 import Head from 'next/head'
-import Header from './Header/Header'
+import Header from 'organisms/Header'
 import styled from '@emotion/styled'
 import tw from '@tailwindcssinjs/macro'
 
 const Container = styled.div(tw`flex flex-col min-h-screen`)
 const Main = styled.main(tw`flex-grow bg-black text-white`)
 
-type BlankLayoutProps = {
+type LayoutBlankProps = {
   children: React.ReactNode
 }
 
-export default function BlankLayout({ children }: BlankLayoutProps): React.ReactElement {
+export default function LayoutBlank({ children }: LayoutBlankProps): React.ReactElement {
   return (
     <Container>
       <Head>

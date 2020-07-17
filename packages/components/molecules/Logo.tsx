@@ -1,5 +1,5 @@
-import Img from 'components/atoms/Img/Img'
-import Link from 'components/atoms/Link/Link'
+import Img from 'atoms/Img'
+import Link from 'atoms/Link'
 
 export default function Logo(): React.ReactElement {
   return (
