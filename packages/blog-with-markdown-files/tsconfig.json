@@ -16,5 +16,12 @@
     "baseUrl": "."
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "../components/organisms/BlankLayout.tsx",
+    "../components/organisms/Header.tsx",
+    "../components/organisms/Footer.tsx"
+  ]
 }
