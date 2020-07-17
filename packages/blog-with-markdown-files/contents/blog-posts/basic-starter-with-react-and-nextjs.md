@@ -1,18 +1,8 @@
-# Blog
-
-## Stack
-
-- React
-- Next.js
-- Typescript
-- Emotion
-- Tailwind
-
-## Features
-
-- Absolute imports
-
-## How to build from scratch
+---
+title: Basic starter with React and Next.js
+slug: basic-starter-with-react-and-nextjs
+date: '09-07-2020'
+---
 
 1. Create a next app: `yarn create next-app`
 
