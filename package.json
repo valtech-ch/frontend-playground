@@ -10,9 +10,6 @@
     "git": "bash ./scripts/git.sh",
     "reset": "npx lerna clean && yarn install"
   },
-  "devDependencies": {
-    "lerna": "^3.22.1"
-  },
   "workspaces": [
     "packages/*"
   ]

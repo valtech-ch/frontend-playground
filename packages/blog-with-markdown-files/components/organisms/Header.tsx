@@ -1,6 +1,6 @@
-import Link from 'atoms/Link'
-import LinkExternal from 'atoms/LinkExternal'
-import Logo from 'molecules/Logo'
+import Link from 'components/atoms/Link'
+import LinkExternal from 'components/atoms/LinkExternal'
+import Logo from 'components/molecules/Logo'
 import styled from '@emotion/styled'
 import tw from '@tailwindcssinjs/macro'
 
