@@ -2,6 +2,10 @@
 
 Playground intended for experimental stacks developed by the Frontend Practice Area.
 
+## Installation
+
+`yarn install`
+
 ## Content
 
 - Monorepo setup with lerna and yarn workspaces
