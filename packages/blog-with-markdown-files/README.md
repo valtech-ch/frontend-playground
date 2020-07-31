@@ -1,5 +1,9 @@
 # Blog
 
+## Local dev run
+
+`yarn dev`
+
 ## Stack
 
 - React
