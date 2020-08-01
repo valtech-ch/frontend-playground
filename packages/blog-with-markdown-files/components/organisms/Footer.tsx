@@ -3,9 +3,9 @@ import styled from '@emotion/styled'
 import tw from '@tailwindcssinjs/macro'
 
 const Footer = styled.footer(tw`bg-black text-white flex justify-center w-full`)
-const FooterContent = styled.div(tw`ml-8 mt-16 border-4 flex`)
+const FooterContent = styled.div(tw`mt-16 mr-8 ml-8 mb-8 border-4 flex`)
 const FooterAvatar = styled.div(tw`flex-shrink-0 w-24 transform -translate-x-6 -translate-y-6`)
-const FooterText = styled.div(tw`flex-initial`)
+const FooterText = styled.div(tw`flex-initial pt-4 pr-4 pb-4`)
 
 export default function BlankLayout(): React.ReactElement {
   return (
