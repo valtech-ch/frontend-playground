@@ -3,4 +3,8 @@ export type BlogPost = {
   slug: string
   title: string
   content: string
+  author: string
+  published: boolean
+  publishDate: string
+  featuredImage?: string
 }
