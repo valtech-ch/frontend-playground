@@ -1,9 +1,5 @@
 # Blog
 
-## Local dev run
-
-`yarn dev`
-
 ## Stack
 
 - React
@@ -12,10 +8,22 @@
 - Emotion
 - Tailwind
 
-## Features
+## Getting Started
 
-- Absolute imports
+Go into the the project folder:
 
-## UX spec
+    cd packages/blog-with-markdown-files
 
-<https://projects.invisionapp.com/share/UBY3O3P8Z7S#/screens>
+Install the dependencies:
+
+    yarn install
+
+Start the local server:
+
+    yarn dev
+
+Open `http://localhost:3000` in your browser.
+
+## Docs
+
+- [UX Spec](https://projects.invisionapp.com/share/UBY3O3P8Z7S#/screens)
