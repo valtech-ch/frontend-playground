@@ -19,8 +19,6 @@ export default function LayoutBlank({ head, children }: LayoutBlankProps): React
       <Header />
 
       <Main>{children}</Main>
-
-      <Footer />
     </Container>
   )
 }
