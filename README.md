@@ -2,16 +2,10 @@
 
 Playground intended for experimental stacks developed by the Frontend Practice Area.
 
-## Installation
+## Packages
 
-`yarn install`
+The repository architecture is a monorepo setup with lerna and yarn workspaces. Therefore, independent projects can be stored in the `packages` folder.
 
-## Content
+Those are the existing packages:
 
-- Monorepo setup with lerna and yarn workspaces
-- Package "blog" with React and Next.js
-
-## Nice to have
-
-- Global rules with eslint, prettier, lint-staged and husky
-- Styleguide
+- blog-with-markdown-files: Blog build with React and Next.js. It uses the Static Generation capabilities from Next.js pre-render an static blog from mardown files. [More info](https://github.com/valtech-ch/frontend-playground/blob/main/packages/blog-with-markdown-files/README.md)
