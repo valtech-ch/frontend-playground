@@ -1030,23 +1030,6 @@ video {
   padding-top: 80%;
 }
 
-.link--button-link {
-  display: block;
-  border-width: 4px;
-  border-style: solid;
-  --border-opacity: 1;
-  border-color: #ffffff;
-  border-color: rgba(255, 255, 255, var(--border-opacity));
-  align-self: flex-end;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  font-size: 0.75rem;
-  margin-left: 0.5rem;
-  white-space: nowrap;
-}
-
 @media(min-width: 480px) {
   .post-item__details-wrapper--image::before {
     padding-top:33.3%;

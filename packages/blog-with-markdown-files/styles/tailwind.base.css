@@ -50,10 +50,6 @@
     padding-top: 80%;
 }
 
-.link--button-link {
-    @apply block border-4 border-solid border-white self-end py-1 px-2 text-xs ml-2 whitespace-no-wrap;
-}
-
 @media(min-width: 480px) {
     .post-item__details-wrapper--image::before {
         padding-top:33.3%;

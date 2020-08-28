@@ -1,4 +1,4 @@
-import Link_ from 'next/Link'
+import Link_ from 'next/link'
 import styled from '@emotion/styled'
 import tw from '@tailwindcssinjs/macro'
 
@@ -9,13 +9,20 @@ type LinkProps = {
   button?: boolean
 }
 
+type Anchor = {
+  button: boolean
+}
+
 export default function Link({ children, href, as, button = false }: LinkProps): React.ReactElement {
-  const buttonClass = button ? 'link--button-link' : undefined
-  const Anchor_ = styled.a(tw`cursor-pointer`)
+  const Anchor = styled.a(({ button }: Anchor) =>
+    button
+      ? tw`cursor-pointer block border-4 border-solid border-white self-end py-1 px-2 text-xs ml-2 whitespace-no-wrap`
+      : tw`cursor-pointer `,
+  )
 
   return (
     <Link_ href={href} as={as}>
-      <Anchor_ className={buttonClass}>{children}</Anchor_>
+      <Anchor button={button}>{children}</Anchor>
     </Link_>
   )
 }
