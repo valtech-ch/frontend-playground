@@ -1,7 +1,10 @@
 ---
 title: Basic starter with React and Next.js
 slug: basic-starter-with-react-and-nextjs
-date: '09-07-2020'
+publishDate: '09-07-2020'
+author: Lorenzo Garcia Moreno
+published: true
+featuredImage: 'http://picsum.photos/seed/Create/800/500'
 ---
 
 1. Create a next app: `yarn create next-app`
