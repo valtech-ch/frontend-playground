@@ -1,5 +1,63 @@
 @tailwind base;
 
+@tailwind components;
+
+.post-list__post-item {
+    @apply flex list-none text-white border-0 border-l-8;
+    transition: border-left-width 200ms ease-in-out;
+}
+
+.post-list__post-item:hover {
+    border-left-width: 24px;
+    transition: border-left-width 180ms ease-in-out;
+}
+
+.post-list__post-item:nth-child(1n) {
+    @apply border-valtech-blue;
+}
+
+.post-list__post-item:nth-child(2n) {
+    @apply border-valtech-rose;
+}
+
+.post-list__post-item:nth-child(3n) {
+    @apply border-valtech-cyan;
+}
+
+.post-list__post-item:nth-child(4n) {
+    @apply border-valtech-yellow;
+}
+
+.post-list__post-item:nth-child(5n) {
+    @apply border-valtech-turquoise;
+}
+
+.post-item__details-wrapper::before {
+    content: "";
+    width: 1px;
+    margin-left: -1px;
+    float: left;
+    height: 0;
+    padding-top: 33.3%;
+  }
+.post-item__details-wrapper::after { /* to clear float */
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.post-item__details-wrapper--image::before {
+    padding-top: 80%;
+}
+
 .link--button-link {
     @apply block border-4 border-solid border-white self-end py-1 px-2 text-xs ml-2 whitespace-no-wrap;
 }
+
+@media(min-width: 480px) {
+    .post-item__details-wrapper--image::before {
+        padding-top:33.3%;
+    }
+}
+
+@tailwind utilities
