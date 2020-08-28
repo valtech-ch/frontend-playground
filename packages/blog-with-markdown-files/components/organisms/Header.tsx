@@ -4,7 +4,7 @@ import Logo from 'components/molecules/Logo'
 import styled from '@emotion/styled'
 import tw from '@tailwindcssinjs/macro'
 
-const Header_ = styled.header(tw`bg-black flex w-full justify-between items-center`)
+const Header_ = styled.header(tw`bg-black flex w-full justify-between items-center p-4 pb-20`)
 const LogoWrapper = styled.div(tw`w-32`)
 const List = styled.ul(tw`text-white`)
 const ListItem = styled.li(tw`inline-block mr-10`)
@@ -17,7 +17,7 @@ export default function Header(): React.ReactElement {
       </LogoWrapper>
       <List>
         <ListItem>
-          <Link href="/blog">Blog</Link>
+          <Link href="/about">About Us</Link>
         </ListItem>
         <ListItem>
           <LinkExternal href="https://github.com/valtech-ch" target="_blank" rel="noopener noreferrer">
