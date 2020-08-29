@@ -36,6 +36,7 @@ export const getStaticProps: GetStaticProps = async () => {
         published: data.published,
         publishDate: data.publishDate,
         featuredImage: data.featuredImage || null,
+        category: data.category || 'Blog',
       } as BlogPost
     })
     .sort((firstPost, nextPost) => {

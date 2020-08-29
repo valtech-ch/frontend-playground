@@ -7,4 +7,5 @@ export type BlogPost = {
   published: boolean
   publishDate: string
   featuredImage?: string
+  category?: string
 }

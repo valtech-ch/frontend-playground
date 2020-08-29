@@ -19,7 +19,7 @@ export default function PostListItem({ blogPost }: PostListItemProps): React.Rea
     <PostListItem_ featuredImage={blogPost.featuredImage}>
       <PostDetailsWrapper featuredImage={blogPost.featuredImage}>
         <PostDetails>
-          <PostCategories>Javascript</PostCategories>
+          <PostCategories>{blogPost.category}</PostCategories>
           <PostTitle>{blogPost.title}</PostTitle>
           <PostByline>
             {blogPost.author} | {blogPost.publishDate}

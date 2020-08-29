@@ -4,6 +4,7 @@ slug: how.toget.better.with.tailwind
 publishDate: '09-06-2020'
 author: Jason Wilson
 published: true
+category: CSS in JS
 featuredImage: 'http://picsum.photos/seed/You/800/500'
 ---
 
