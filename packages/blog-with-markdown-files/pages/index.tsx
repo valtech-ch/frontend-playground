@@ -1,8 +1,7 @@
 import { BlogPost } from 'types/blog'
 import { CONTENTS_BLOG_POSTS_PATH } from 'constants/blog'
 import { GetStaticProps } from 'next'
-import Link from 'components/atoms/Link'
-import PostList from 'components/organisms/PostList'
+import PostList from 'components/organisms/PostList/PostList'
 import React from 'react'
 import fs from 'fs'
 import matter from 'gray-matter'
@@ -20,7 +19,7 @@ export default function IndexPage({ blogPosts }: IndexPageProps): React.ReactEle
 export const getStaticProps: GetStaticProps = async () => {
   const files = fs.readdirSync(`${process.cwd()}/${CONTENTS_BLOG_POSTS_PATH}`, 'utf-8')
 
-  const blogPosts = files
+  const blogPosts: BlogPost[] = files
     .filter((fn) => fn.endsWith('.md'))
     .map((fn) => {
       const path = `${process.cwd()}/${CONTENTS_BLOG_POSTS_PATH}/${fn}`
@@ -29,7 +28,15 @@ export const getStaticProps: GetStaticProps = async () => {
       })
       const { data } = matter(rawContent)
 
-      return { ...data, id: uuid() }
+      return {
+        id: uuid(),
+        slug: data.slug,
+        title: data.title,
+        author: data.author,
+        published: data.published,
+        publishDate: data.publishDate,
+        featuredImage: data.featuredImage || null,
+      } as BlogPost
     })
     .sort((firstPost, nextPost) => {
       return Date.parse(nextPost.publishDate) - Date.parse(firstPost.publishDate)

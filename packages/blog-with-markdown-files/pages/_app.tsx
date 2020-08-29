@@ -2,7 +2,7 @@ import 'styles/base.css'
 
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-import LayoutBlank from 'components/organisms/LayoutBlank'
+import LayoutBlank from 'components/organisms/LayoutBlank/LayoutBlank'
 import React from 'react'
 
 export default function MyApp({ Component, pageProps }: AppProps): React.ReactNode {

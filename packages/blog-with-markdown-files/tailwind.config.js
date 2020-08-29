@@ -8,6 +8,16 @@ module.exports = {
         'valtech-turquoise': 'rgb(13, 253, 180)',
         'valtech-yellow': 'rgb(255, 240, 17)',
       },
+      borderWidth: {
+        '24': '24px',
+      },
+      transitionProperty: {
+        'border-width': 'border-left-width',
+      },
+      padding: {
+        '33': '33.3%',
+        '80': '80.0%',
+      },
     },
   },
   variants: {},

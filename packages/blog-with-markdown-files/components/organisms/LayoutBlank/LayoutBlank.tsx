@@ -1,5 +1,4 @@
-import Footer from 'components/organisms/Footer'
-import Header from 'components/organisms/Header'
+import Header from 'components/organisms/Header/Header'
 import styled from '@emotion/styled'
 import tw from '@tailwindcssinjs/macro'
 
