@@ -4,7 +4,10 @@ slug: basic-starter-with-react-and-nextjs
 publishDate: '09-07-2020'
 author: Lorenzo Garcia Moreno
 published: true
-category: Javascript
+tags:
+- React
+- Next.JS
+- JavaScript
 featuredImage: 'http://picsum.photos/seed/Create/800/500'
 ---
 

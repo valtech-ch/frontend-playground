@@ -1,10 +1,12 @@
 ---
 title: How to Get Better with Tailwind
-slug: how.toget.better.with.tailwind
+slug: how-to-get-better-with-tailwind
 publishDate: '09-06-2020'
 author: Jason Wilson
 published: true
-category: CSS in JS
+tags:
+- CSS in JS
+- JavaScript
 featuredImage: 'http://picsum.photos/seed/You/800/500'
 ---
 
