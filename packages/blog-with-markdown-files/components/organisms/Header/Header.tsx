@@ -10,21 +10,21 @@ const List = styled.ul(tw`text-white`)
 const ListItem = styled.li(tw`inline-block mr-10`)
 
 export default function Header(): React.ReactElement {
-  return (
-    <Header_>
-      <LogoWrapper>
-        <Logo />
-      </LogoWrapper>
-      <List>
-        <ListItem>
-          <Link href="/about">About Us</Link>
-        </ListItem>
-        <ListItem>
-          <LinkExternal href="https://github.com/valtech-ch" target="_blank" rel="noopener noreferrer">
-            Github
-          </LinkExternal>
-        </ListItem>
-      </List>
-    </Header_>
-  )
+	return (
+		<Header_>
+			<LogoWrapper>
+				<Logo />
+			</LogoWrapper>
+			<List>
+				<ListItem>
+					<Link href="/about">About Us</Link>
+				</ListItem>
+				<ListItem>
+					<LinkExternal href="https://github.com/valtech-ch" target="_blank" rel="noopener noreferrer">
+						Github
+					</LinkExternal>
+				</ListItem>
+			</List>
+		</Header_>
+	)
 }
