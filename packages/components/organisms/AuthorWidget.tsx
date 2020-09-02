@@ -1,27 +1,5 @@
-import React from 'react'
-import Typography from 'components/Typography'
+import React from "react";
 
-const Container = styled.div(tw`bg-red-300`)
-const AuthorImage = style.img(tw``)
-
-export default function AuthorWidget({authorName, content, children}) {
-  return (
-    <Container>
-      <AuthorImage />
-
-      <Typography variant="h1">{authorName}</Typography>
-      <Typography variant="p">{content}</Typography>
-    </Container>
-  )
-}
-
-
-import React from 'react'
-
-export default function Typography({variant, children}) {
-    return (
-        <varian>
-            {children}
-        </variant>
-    )
+export default function AuthorWidget() {
+	return <div>{/* Dummy Component */}</div>;
 }
