@@ -26,7 +26,7 @@ export const getStaticProps: GetStaticProps = async () => {
 		.filter((fileName) => fileName.match(/\d{4}.\d{2}.\d{2}/) !== null)
 		.map((fileName) => {
 			const path = `${process.cwd()}/${CONTENTS_BLOG_POSTS_PATH}/${fileName}`
-			const [date] = fileName.match(/\d{4}.\d{2}.\d{2}/)
+			const fileNameDate = fileName.match(/\d{4}.\d{2}.\d{2}/)
 			const rawContent = fs.readFileSync(path, {
 				encoding: 'utf-8',
 			})
@@ -40,7 +40,7 @@ export const getStaticProps: GetStaticProps = async () => {
 				title: data.title,
 				author: data.author,
 				published: data.published,
-				publishDate: date,
+				publishDate: (fileNameDate && fileNameDate[0]) || '',
 				featuredImage: fs.existsSync(`${process.cwd()}/public/${featuredImagePath}`) ? `./${featuredImagePath}` : null,
 				tags: data.tags || ['Blog'],
 			} as BlogPost
