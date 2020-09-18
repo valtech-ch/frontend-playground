@@ -1,23 +1,22 @@
 {
-  "root": true,
-  "parser": "@typescript-eslint/parser",
+  "extends": [
+    // specific react config
+    "plugin:react/recommended",
+    "airbnb",
+    // the main config should go last
+    "../../.eslintrc",
+    // prettier, and their plugins, should the last to override some other configs
+    "prettier/react"
+  ],
+  "plugins": ["react", "react-hooks"],
   "parserOptions": {
     "ecmaFeatures": { "jsx": true }
   },
-  "env": {
-    "browser": true,
-    "node": true
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended",
-    // Prettier plugin and recommended rules
-    "prettier/@typescript-eslint",
-    "plugin:prettier/recommended"
-  ],
   "rules": {
     "jsx-a11y/anchor-is-valid": [
       "error",
@@ -27,14 +26,10 @@
         "aspects": ["invalidHref", "preferButton"]
       }
     ],
-    // Include .prettierrc.js rules
-    "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "react/prop-types": "off",
-    "react/react-in-jsx-scope": "off"
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }
