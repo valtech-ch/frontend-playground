@@ -10,6 +10,8 @@ import remarkHtml from 'remark-html'
 import remarkParse from 'remark-parse'
 import unified from 'unified'
 
+import style from '../../styles/post-content.module.css'
+
 type BlogPostPageProps = {
 	blogPost: BlogPost
 }
@@ -18,7 +20,7 @@ export default function BlogPostPage({ blogPost }: BlogPostPageProps): React.Rea
 	return (
 		<div>
 			<h1>{blogPost.title}</h1>
-			<section dangerouslySetInnerHTML={{ __html: blogPost.content }}></section>
+			<section className="post-content" dangerouslySetInnerHTML={{ __html: blogPost.content }}></section>
 		</div>
 	)
 }

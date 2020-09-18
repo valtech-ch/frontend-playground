@@ -3,3 +3,16 @@
 @tailwind components;
 
 @tailwind utilities;
+
+/*
+we tried to define this class in post-content.module.css and import it from [slug].tsx, but did not work. Why?
+TODO: discuss this
+*/
+.post-content p {
+	@apply mb-8;
+}
+
+/*
+TODO: question: could we avoid not having to npm run bulid:base-css when we edit base.css?
+*/
+
