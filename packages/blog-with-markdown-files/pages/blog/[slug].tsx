@@ -9,18 +9,34 @@ import remarkHighlight from 'remark-highlight.js'
 import remarkHtml from 'remark-html'
 import remarkParse from 'remark-parse'
 import unified from 'unified'
-
-import style from '../../styles/post-content.module.css'
+import styled from '@emotion/styled'
+import tw from '@tailwindcssinjs/macro'
 
 type BlogPostPageProps = {
 	blogPost: BlogPost
 }
 
+export const Section = styled.section`
+	${tw`px-10 py-8`}
+
+	p {
+		${tw`mb-4`}
+	}
+
+	h2 {
+		${tw`text-3xl font-bold mb-1`}
+	}
+
+	h3 {
+		${tw`text-2xl font-bold mb-1`}
+	}
+`
+
 export default function BlogPostPage({ blogPost }: BlogPostPageProps): React.ReactElement {
 	return (
 		<div>
 			<h1>{blogPost.title}</h1>
-			<section className="post-content" dangerouslySetInnerHTML={{ __html: blogPost.content }}></section>
+			<Section dangerouslySetInnerHTML={{ __html: blogPost.content }}></Section>
 		</div>
 	)
 }
