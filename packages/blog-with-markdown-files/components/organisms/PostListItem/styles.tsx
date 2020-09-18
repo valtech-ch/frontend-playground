@@ -2,16 +2,16 @@ import styled from '@emotion/styled'
 import tw from '@tailwindcssinjs/macro'
 
 type PostListItem = {
-	featuredImage?: string
-	index: number
+  featuredImage?: string
+  index: number
 }
 
 const colorUtilities = [
-	tw`border-valtech-blue`,
-	tw`border-valtech-rose`,
-	tw`border-valtech-cyan`,
-	tw`border-valtech-yellow`,
-	tw`border-valtech-turquoise`,
+  tw`border-valtech-blue`,
+  tw`border-valtech-rose`,
+  tw`border-valtech-cyan`,
+  tw`border-valtech-yellow`,
+  tw`border-valtech-turquoise`,
 ]
 
 export const PostListItem: React.FC<PostListItem> = styled.li`
@@ -24,26 +24,26 @@ export const PostListItem: React.FC<PostListItem> = styled.li`
 `
 
 type PostDetailsWrapper = {
-	featuredImage?: string
+  featuredImage?: string
 }
 export const PostDetailsWrapper: React.FC<PostDetailsWrapper> = styled.div`
-	${tw`flex-1`}
+  ${tw`flex-1`}
 
-	&:before {
-		content: '';
-		width: 1px;
-		margin-left: -1px;
-		float: left;
-		height: 0;
-		${({ featuredImage }: PostDetailsWrapper) => (featuredImage ? tw`pt-80 sm:pt-33` : tw`pt-33`)}
-	}
+  &:before {
+    content: '';
+    width: 1px;
+    margin-left: -1px;
+    float: left;
+    height: 0;
+    ${({ featuredImage }: PostDetailsWrapper) => (featuredImage ? tw`pt-80 sm:pt-33` : tw`pt-33`)}
+  }
 
-	/* to clear float */
-	&:after {
-		content: '';
-		display: table;
-		clear: both;
-	}
+  /* to clear float */
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 `
 export const PostDetails = styled.div(tw`flex flex-col h-full`)
 export const PostTitle = styled.h2(tw`mt-auto text-xl`)
