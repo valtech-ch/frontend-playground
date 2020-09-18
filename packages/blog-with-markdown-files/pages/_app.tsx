@@ -1,4 +1,5 @@
 import 'styles/base.css'
+import 'styles/post-page.css'
 
 import { AppProps } from 'next/app'
 import Head from 'next/head'
