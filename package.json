@@ -7,10 +7,40 @@
   "author": "valtech-ch",
   "license": "MIT",
   "scripts": {
+    "tsc": "yarn workspaces run tsc",
     "git": "bash ./scripts/git.sh",
-    "reset": "npx lerna clean && yarn install"
+    "reset": "npx lerna clean && yarn install",
+    "lint": "eslint . --ext .ts,.tsx,.js",
+    "lint:fix": "yarn lint --fix"
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.6"
+  },
+  "lint-staged": {
+    "*.{json,yml,yaml,css,scss,md,mdx,graphql}": [
+      "prettier --write"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn tsc"
+    }
+  }
 }

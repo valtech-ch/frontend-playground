@@ -2,10 +2,10 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
 type ResponseData = {
-	name: string
+  name: string
 }
 
 export default function hello(req: NextApiRequest, res: NextApiResponse<ResponseData>): void {
-	res.statusCode = 200
-	res.json({ name: 'John Doe' })
+  res.statusCode = 200
+  res.json({ name: 'John Doe' })
 }
