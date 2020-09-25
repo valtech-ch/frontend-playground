@@ -1,5 +1,8 @@
 import { BlogPost } from 'types/blog'
-import { CONTENTS_BLOG_POSTS_PATH, IMAGES_BLOG_POSTS_PATH } from 'constants/blog'
+import {
+  CONTENTS_BLOG_POSTS_PATH,
+  IMAGES_BLOG_POSTS_PATH,
+} from 'constants/blog'
 import { GetStaticProps } from 'next'
 import PostList from 'components/organisms/PostList/PostList'
 import React from 'react'
@@ -11,13 +14,18 @@ type IndexPageProps = {
   blogPosts: BlogPost[]
 }
 
-export default function IndexPage({ blogPosts }: IndexPageProps): React.ReactElement {
+export default function IndexPage({
+  blogPosts,
+}: IndexPageProps): React.ReactElement {
   return <PostList blogPosts={blogPosts} />
 }
 
 // This function gets called at build time on server-side.
 export const getStaticProps: GetStaticProps = async () => {
-  const files = fs.readdirSync(`${process.cwd()}/${CONTENTS_BLOG_POSTS_PATH}`, 'utf-8')
+  const files = fs.readdirSync(
+    `${process.cwd()}/${CONTENTS_BLOG_POSTS_PATH}`,
+    'utf-8',
+  )
 
   const blogPosts: BlogPost[] = files
     // just MD files
@@ -32,7 +40,10 @@ export const getStaticProps: GetStaticProps = async () => {
       })
       const { data } = matter(rawContent)
 
-      const featuredImagePath = `${IMAGES_BLOG_POSTS_PATH}/${fileName.replace('.md', '.jpg')}`
+      const featuredImagePath = `${IMAGES_BLOG_POSTS_PATH}/${fileName.replace(
+        '.md',
+        '.jpg',
+      )}`
 
       return {
         id: uuid(),
@@ -41,13 +52,19 @@ export const getStaticProps: GetStaticProps = async () => {
         author: data.author,
         published: data.published,
         publishDate: date,
-        featuredImage: fs.existsSync(`${process.cwd()}/public/${featuredImagePath}`) ? `./${featuredImagePath}` : null,
+        featuredImage: fs.existsSync(
+          `${process.cwd()}/public/${featuredImagePath}`,
+        )
+          ? `./${featuredImagePath}`
+          : null,
         tags: data.tags || ['Blog'],
       } as BlogPost
     })
     .filter((blogPost) => blogPost.published)
     .sort((firstPost, nextPost) => {
-      return Date.parse(nextPost.publishDate) - Date.parse(firstPost.publishDate)
+      return (
+        Date.parse(nextPost.publishDate) - Date.parse(firstPost.publishDate)
+      )
     })
 
   // By returning { props: blogPosts }, the IndexPage component

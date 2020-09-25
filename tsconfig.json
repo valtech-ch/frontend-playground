@@ -1,4 +1,5 @@
 {
   "extends": "@valtech-ch/eslint-config-react/tsconfig",
+  "compilerOptions": { "baseUrl": "./" },
   "include": ["**/*.ts", "**/*.tsx", "**/*.js"]
 }

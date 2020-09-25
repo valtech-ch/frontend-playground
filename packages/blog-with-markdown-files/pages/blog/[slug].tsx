@@ -14,7 +14,9 @@ type BlogPostPageProps = {
   blogPost: BlogPost
 }
 
-export default function BlogPostPage({ blogPost }: BlogPostPageProps): React.ReactElement {
+export default function BlogPostPage({
+  blogPost,
+}: BlogPostPageProps): React.ReactElement {
   return (
     <div>
       <h1>{blogPost.title}</h1>
@@ -63,7 +65,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const path = `${process.cwd()}/${CONTENTS_BLOG_POSTS_PATH}`
   const files = fs.readdirSync(path, 'utf-8')
 
-  const markdownFileNames = files.filter((fn) => fn.endsWith('.md')).map((fn) => fn.replace('.md', ''))
+  const markdownFileNames = files
+    .filter((fn) => fn.endsWith('.md'))
+    .map((fn) => fn.replace('.md', ''))
 
   return {
     paths: markdownFileNames.map((fileName) => {

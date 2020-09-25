@@ -1,0 +1,15 @@
+DONE
+
+1) Create "@valtech-ch/eslint-config-base": https://www.npmjs.com/package/@valtech-ch/eslint-config-base
+2) Create "@valtech-ch/eslint-config-react": https://www.npmjs.com/package/@valtech-ch/eslint-config-react
+3) publish both it to npm
+4) try a project with both packages
+
+TODO
+
+- Make the config 100% working in a project (still minor issues)
+- Make the config 100% working for a monorepo (didn't try yet)
+- create "@valtech-ch/eslint-config-angular"
+- create "@valtech-ch/eslint-config-vue"
+- Avoid to install dependencies using "dependencies" but allow the project to  update the "peerDependencies"
+- check rules

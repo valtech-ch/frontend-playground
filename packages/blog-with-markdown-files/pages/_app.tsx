@@ -4,7 +4,10 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 import LayoutBlank from 'components/organisms/LayoutBlank/LayoutBlank'
 
-export default function MyApp({ Component, pageProps }: AppProps): React.ReactNode {
+export default function MyApp({
+  Component,
+  pageProps,
+}: AppProps): React.ReactNode {
   const head = (
     <Head>
       <title>Frontent Practice Area Blog - Valtech Switzerland</title>

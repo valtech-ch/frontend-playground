@@ -10,7 +10,10 @@ type LayoutBlankProps = {
   head: React.ReactNode
 }
 
-export default function LayoutBlank({ head, children }: LayoutBlankProps): React.ReactElement {
+export default function LayoutBlank({
+  head,
+  children,
+}: LayoutBlankProps): React.ReactElement {
   return (
     <Container>
       {head}

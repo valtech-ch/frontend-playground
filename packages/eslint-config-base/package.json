@@ -1,17 +1,16 @@
 {
-  "name": "@valtech-ch/eslint-config-react",
-  "description": "ESLint configuration file containing rules for React projects using TypeScript",
+  "name": "@valtech-ch/eslint-config-base",
+  "description": "ESLint configuration file containing rules for TypeScript projects",
   "version": "0.0.1",
   "license": "MIT",
   "keywords": [
     "TypeScript",
-    "React",
     "ESLint"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/valtech-ch/frontend-playground.git",
-    "directory": "packages/eslint-config-react"
+    "directory": "packages/eslint-config-base"
   },
   "author": {
     "name": "Valtech Switzerland AG",
@@ -32,9 +31,7 @@
     "node": ">= 12.4.0",
     "npm": ">= 6.14.0"
   },
-  "dependencies": {
-    "@valtech-ch/eslint-config-base": "^1.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.1.1",
     "@typescript-eslint/parser": "^4.1.1",
@@ -42,11 +39,8 @@
     "eslint-config-airbnb-typescript": "^10.0.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jest": "^23.13.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^4.0.2",
     "prettier": "^2.0.5",
     "typescript": "^4.0.3"
   },
@@ -57,11 +51,8 @@
     "eslint-config-airbnb-typescript": "^10.0.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jest": "^23.13.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^4.0.2",
     "prettier": "^2.0.5",
     "typescript": "^4.0.3"
   }
