@@ -1,8 +1,6 @@
 {
   "extends": "@valtech-ch/eslint-config-base/tsconfig",
   "compilerOptions": {
-    "baseUrl": ".",
     "jsx": "preserve"
-  },
-  "include": ["**/*.ts", "**/*.tsx"]
+  }
 }
