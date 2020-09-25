@@ -1,0 +1,59 @@
+{
+  "name": "@valtech-ch/eslint-config-base",
+  "description": "ESLint configuration file containing rules for TypeScript projects",
+  "version": "0.0.3",
+  "license": "MIT",
+  "keywords": [
+    "TypeScript",
+    "ESLint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valtech-ch/frontend-playground.git",
+    "directory": "packages/eslint-config-base"
+  },
+  "author": {
+    "name": "Valtech Switzerland AG",
+    "url": "https://www.valtech.com/"
+  },
+  "contributors": [
+    {
+      "name": "Christoph Dörfel",
+      "email": "christoph.doerfel@valtech.com"
+    },
+    {
+      "name": "Lorenzo Garcia Moreno",
+      "email": "lorenzo.garciamoreno@valtech.com"
+    }
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">= 12.4.0",
+    "npm": ">= 6.14.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "eslint": "^7.1.0",
+    "eslint-config-airbnb-typescript": "^10.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "prettier": "^2.0.5",
+    "typescript": "^4.0.3"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "eslint": "^7.1.0",
+    "eslint-config-airbnb-typescript": "^10.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "prettier": "^2.0.5",
+    "typescript": "^4.0.3"
+  }
+}

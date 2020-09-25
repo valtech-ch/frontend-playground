@@ -5,7 +5,10 @@ type ResponseData = {
   name: string
 }
 
-export default function hello(req: NextApiRequest, res: NextApiResponse<ResponseData>): void {
+export default function hello(
+  req: NextApiRequest,
+  res: NextApiResponse<ResponseData>,
+): void {
   res.statusCode = 200
   res.json({ name: 'John Doe' })
 }

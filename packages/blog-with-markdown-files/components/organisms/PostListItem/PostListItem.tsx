@@ -15,7 +15,10 @@ type PostListItemProps = {
   index: number
 }
 
-export default function PostListItem({ blogPost, index }: PostListItemProps): React.ReactElement {
+export default function PostListItem({
+  blogPost,
+  index,
+}: PostListItemProps): React.ReactElement {
   return (
     <PostListItemStyled featuredImage={blogPost.featuredImage} index={index}>
       <PostDetailsWrapper featuredImage={blogPost.featuredImage}>

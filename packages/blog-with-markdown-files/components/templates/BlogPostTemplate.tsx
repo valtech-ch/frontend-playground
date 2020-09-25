@@ -4,7 +4,9 @@ type BlogPostPageProps = {
   blogPost: BlogPost
 }
 
-export default function BlogPostTemplate({ blogPost }: BlogPostPageProps): React.ReactElement {
+export default function BlogPostTemplate({
+  blogPost,
+}: BlogPostPageProps): React.ReactElement {
   return (
     <div>
       <h1>{blogPost.title}</h1>

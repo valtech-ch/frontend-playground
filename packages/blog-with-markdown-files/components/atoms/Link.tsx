@@ -19,7 +19,12 @@ type Link = {
   button?: boolean
 }
 
-export default function Link({ children, href, as, button = false }: Link): React.ReactElement {
+export default function Link({
+  children,
+  href,
+  as,
+  button = false,
+}: Link): React.ReactElement {
   return (
     <LinkFromNext href={href} as={as}>
       <Anchor button={button}>{children}</Anchor>

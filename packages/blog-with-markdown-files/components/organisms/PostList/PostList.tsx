@@ -4,13 +4,17 @@ import { BlogPost } from 'types/blog'
 
 import PostListItem from 'components/organisms/PostListItem/PostListItem'
 
-const PostListStyled = styled.ul(tw`flex w-full flex-wrap justify-between items-center`)
+const PostListStyled = styled.ul(
+  tw`flex w-full flex-wrap justify-between items-center`,
+)
 
 type PostListProps = {
   blogPosts: BlogPost[]
 }
 
-export default function PostList({ blogPosts }: PostListProps): React.ReactElement {
+export default function PostList({
+  blogPosts,
+}: PostListProps): React.ReactElement {
   return (
     <PostListStyled>
       {blogPosts
